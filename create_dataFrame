@@ -1,0 +1,25 @@
+#for CSV files
+
+import pandas as pd
+df=pd.read_csv('file_name.ext')
+
+
+
+
+#for SQL files
+
+from sqlalchemy import create_engine
+import pandas as pd
+df=pd.read_sql_queary('sql code',filetype)
+
+#OR
+with engine.connet() as con
+    rs=con.exeute('sql code')
+    df=pd.DataFrame(rs.fectchmany(size=number_of_rows))
+    df.columns=rs.keys()
+#OR
+engine=create_engine('dbsys:///filepath.ext')
+con=engine.connect()
+rs=con.execute('sql code')
+df=pd.DataFrame(rs.fetchall())
+con.close()
