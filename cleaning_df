@@ -1,0 +1,12 @@
+#use to save df as a file
+df.to_filetype('filename.extension')
+
+#filter column by row value
+newdf=df.loc[df['column_name'] == value]
+
+#save a column as list
+dfToList = df['column_name'].tolist()
+dfToList=df.column_name.tolist()
+
+#shows basic info on the columns
+df.info()
