@@ -3,7 +3,8 @@
 import pandas as pd
 df=pd.read_csv('file_name.ext')
 
-
+#for excel files
+df=pd.read_excel('file_name.ext',sheet=0)
 
 
 #for SQL files
